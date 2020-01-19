@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/karalabe/usb"
+	"github.com/gamebay/usb"
 )
 
 func main() {
