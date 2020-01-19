@@ -251,3 +251,11 @@ func (dev *rawDevice) Read(b []byte) (int, error) {
 	}
 	return int(transferred), nil
 }
+
+func (dev *rawDevice) GetFeatureReport(b []byte) (int, error) {
+	return 0, ErrUnsupportedPlatform
+}
+
+func (dev *rawDevice) SendFeatureReport(b []byte) (int, error) {
+	return 0, ErrUnsupportedPlatform
+}

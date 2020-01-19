@@ -40,3 +40,11 @@ func (dev *RawDevice) Write(b []byte) (int, error) {
 func (dev *RawDevice) Read(b []byte) (int, error) {
 	return 0, ErrUnsupportedPlatform
 }
+
+func (dev *rawDevice) GetFeatureReport(b []byte) (int, error) {
+	return 0, ErrUnsupportedPlatform
+}
+
+func (dev *rawDevice) SendFeatureReport(b []byte) (int, error) {
+	return 0, ErrUnsupportedPlatform
+}

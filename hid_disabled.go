@@ -40,3 +40,20 @@ func (dev *HidDevice) Write(b []byte) (int, error) {
 func (dev *HidDevice) Read(b []byte) (int, error) {
 	return 0, ErrUnsupportedPlatform
 }
+
+// SendFeatureReport sends a feature report to a HID device
+// Feature reports are sent over the Control endpoint as a Set_Report transfer.
+// The first byte of b must contain the Report ID. For devices which only
+// support a single report, this must be set to 0x0. The remaining bytes
+// contain the report data. 
+func (dev *HidDevice) SendFeatureReport(b []byte) (int, error) {
+	return 0, ErrUnsupportedPlatform
+}
+
+// GetFeatureReport retreives a feature report from a HID device
+// Set the first byte of []b to the Report ID of the report to be read. Make
+// sure to allow space for this extra byte in []b. Upon return, the first byte
+// will still contain the Report ID, and the report data will start in b[1].
+func (dev *HidDevice) GetFeatureReport(b []byte) (int, error) {
+	return 0, ErrUnsupportedPlatform
+}
